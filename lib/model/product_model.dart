@@ -3,16 +3,12 @@ class ProductModel {
   final String title;
   final double price;
   final String description;
-  final String image;
-  final String category;
 
   ProductModel({
     this.id,
     required this.title,
     required this.price,
     required this.description,
-    required this.image,
-    required this.category,
   });
 
   // Converts a ProductModel instance into a Map
@@ -22,8 +18,6 @@ class ProductModel {
       'title': title,
       'price': price,
       'description': description,
-      'image': image,
-      'category': category,
     };
   }
 
@@ -34,8 +28,6 @@ class ProductModel {
       title: map['title'],
       price: map['price'],
       description: map['description'],
-      image: map['image'],
-      category: map['category'],
     );
   }
 
@@ -45,8 +37,6 @@ class ProductModel {
       title: json['title'],
       price: json['price'].toDouble(),
       description: json['description'],
-      image: json['image'],
-      category: json['category'],
     );
   }
 }
